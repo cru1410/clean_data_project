@@ -1,4 +1,19 @@
-## CODE BOOK DATA DICTIONARY
+## CODE BOOK 
+
+Using the data obtained from [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip], the following transformations and calculations was performed to clean up the data using 'run_analysis.R':
+
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+This tidy data set was output to a file named 'tidyset.txt'. 
+
+The next section provides a data dictionary for each variable in 'tidyset.txt'.
+
+
+## DATA DICTIONARY (tidyset.txt)
 
 |Variable Name|Unit|Description of the Variable|
 |---|---|---|
@@ -81,3 +96,87 @@
 |BodyAngularVelocityJerkEuclideanNormFrequencyDomainMeanValue|radians/second|Body Angular Velocity Jerk signal using the Euclidean Normfrequency domain signals - Mean Value|
 |BodyAngularVelocityJerkEuclideanNormFrequencyDomainStandardDeviation|radians/second|Body Angular Velocity Jerk signal using the Euclidean Normfrequency domain signals - Standard Deviation|
 |BodyAngularVelocityJerkEuclideanNormFrequencyDomainMeanFrequency|radians/second|Body Angular Velocity Jerk signal using the Euclidean Normfrequency domain signals - Mean Frequency|
+
+## How the Variable Names of the Extracted Measurements were Renamed
+
+|Original Variable Names|Variable Names Renamed to be more descriptive|
+|---|---|
+|tBodyAcc-mean()-X|BodyLinearAccelerationXaxisTimeDomainMeanValue|
+|tBodyAcc-mean()-Y|BodyLinearAccelerationYaxisTimeDomainMeanValue|
+|tBodyAcc-mean()-Z|BodyLinearAccelerationZaxisTimeDomainMeanValue|
+|tBodyAcc-std()-X|BodyLinearAccelerationXaxisTimeDomainStandardDeviation|
+|tBodyAcc-std()-Y|BodyLinearAccelerationYaxisTimeDomainStandardDeviation|
+|tBodyAcc-std()-Z|BodyLinearAccelerationZaxisTimeDomainStandardDeviation|
+|tGravityAcc-mean()-X|GravityLinearAccelerationXaxisTimeDomainMeanValue|
+|tGravityAcc-mean()-Y|GravityLinearAccelerationYaxisTimeDomainMeanValue|
+|tGravityAcc-mean()-Z|GravityLinearAccelerationZaxisTimeDomainMeanValue|
+|tGravityAcc-std()-X|GravityLinearAccelerationXaxisTimeDomainStandardDeviation|
+|tGravityAcc-std()-Y|GravityLinearAccelerationYaxisTimeDomainStandardDeviation|
+|tGravityAcc-std()-Z|GravityLinearAccelerationZaxisTimeDomainStandardDeviation|
+|tBodyAccJerk-mean()-X|BodyLinearAccelerationJerkXaxisTimeDomainMeanValue|
+|tBodyAccJerk-mean()-Y|BodyLinearAccelerationJerkYaxisTimeDomainMeanValue|
+|tBodyAccJerk-mean()-Z|BodyLinearAccelerationJerkZaxisTimeDomainMeanValue|
+|tBodyAccJerk-std()-X|BodyLinearAccelerationJerkXaxisTimeDomainStandardDeviation|
+|tBodyAccJerk-std()-Y|BodyLinearAccelerationJerkYaxisTimeDomainStandardDeviation|
+|tBodyAccJerk-std()-Z|BodyLinearAccelerationJerkZaxisTimeDomainStandardDeviation|
+|tBodyGyro-mean()-X|BodyAngularVelocityXaxisTimeDomainMeanValue|
+|tBodyGyro-mean()-Y|BodyAngularVelocityYaxisTimeDomainMeanValue|
+|tBodyGyro-mean()-Z|BodyAngularVelocityZaxisTimeDomainMeanValue|
+|tBodyGyro-std()-X|BodyAngularVelocityXaxisTimeDomainStandardDeviation|
+|tBodyGyro-std()-Y|BodyAngularVelocityYaxisTimeDomainStandardDeviation|
+|tBodyGyro-std()-Z|BodyAngularVelocityZaxisTimeDomainStandardDeviation|
+|tBodyGyroJerk-mean()-X|BodyAngularVelocityJerkXaxisTimeDomainMeanValue|
+|tBodyGyroJerk-mean()-Y|BodyAngularVelocityJerkYaxisTimeDomainMeanValue|
+|tBodyGyroJerk-mean()-Z|BodyAngularVelocityJerkZaxisTimeDomainMeanValue|
+|tBodyGyroJerk-std()-X|BodyAngularVelocityJerkXaxisTimeDomainStandardDeviation|
+|tBodyGyroJerk-std()-Y|BodyAngularVelocityJerkYaxisTimeDomainStandardDeviation|
+|tBodyGyroJerk-std()-Z|BodyAngularVelocityJerkZaxisTimeDomainStandardDeviation|
+|tBodyAccMag-mean()|BodyLinearAccelerationEuclideanNormTimeDomainMeanValue|
+|tBodyAccMag-std()|BodyLinearAccelerationEuclideanNormTimeDomainStandardDeviation|
+|tGravityAccMag-mean()|GravityLinearAccelerationEuclideanNormTimeDomainMeanValue|
+|tGravityAccMag-std()|GravityLinearAccelerationEuclideanNormTimeDomainStandardDeviation|
+|tBodyAccJerkMag-mean()|BodyLinearAccelerationJerkEuclideanNormTimeDomainMeanValue|
+|tBodyAccJerkMag-std()|BodyLinearAccelerationJerkEuclideanNormTimeDomainStandardDeviation|
+|tBodyGyroMag-mean()|BodyAngularVelocityEuclideanNormTimeDomainMeanValue|
+|tBodyGyroMag-std()|BodyAngularVelocityEuclideanNormTimeDomainStandardDeviation|
+|tBodyGyroJerkMag-mean()|BodyAngularVelocityJerkEuclideanNormTimeDomainMeanValue|
+|tBodyGyroJerkMag-std()|BodyAngularVelocityJerkEuclideanNormTimeDomainStandardDeviation|
+|fBodyAcc-mean()-X|BodyLinearAccelerationXaxisFrequencyDomainMeanValue|
+|fBodyAcc-mean()-Y|BodyLinearAccelerationYaxisFrequencyDomainMeanValue|
+|fBodyAcc-mean()-Z|BodyLinearAccelerationZaxisFrequencyDomainMeanValue|
+|fBodyAcc-std()-X|BodyLinearAccelerationXaxisFrequencyDomainStandardDeviation|
+|fBodyAcc-std()-Y|BodyLinearAccelerationYaxisFrequencyDomainStandardDeviation|
+|fBodyAcc-std()-Z|BodyLinearAccelerationZaxisFrequencyDomainStandardDeviation|
+|fBodyAcc-meanFreq()-X|BodyLinearAccelerationXaxisFrequencyDomainMeanFrequency|
+|fBodyAcc-meanFreq()-Y|BodyLinearAccelerationYaxisFrequencyDomainMeanFrequency|
+|fBodyAcc-meanFreq()-Z|BodyLinearAccelerationZaxisFrequencyDomainMeanFrequency|
+|fBodyAccJerk-mean()-X|BodyLinearAccelerationJerkXaxisFrequencyDomainMeanValue|
+|fBodyAccJerk-mean()-Y|BodyLinearAccelerationJerkYaxisFrequencyDomainMeanValue|
+|fBodyAccJerk-mean()-Z|BodyLinearAccelerationJerkZaxisFrequencyDomainMeanValue|
+|fBodyAccJerk-std()-X|BodyLinearAccelerationJerkXaxisFrequencyDomainStandardDeviation|
+|fBodyAccJerk-std()-Y|BodyLinearAccelerationJerkYaxisFrequencyDomainStandardDeviation|
+|fBodyAccJerk-std()-Z|BodyLinearAccelerationJerkZaxisFrequencyDomainStandardDeviation|
+|fBodyAccJerk-meanFreq()-X|BodyLinearAccelerationJerkXaxisFrequencyDomainMeanFrequency|
+|fBodyAccJerk-meanFreq()-Y|BodyLinearAccelerationJerkYaxisFrequencyDomainMeanFrequency|
+|fBodyAccJerk-meanFreq()-Z|BodyLinearAccelerationJerkZaxisFrequencyDomainMeanFrequency|
+|fBodyGyro-mean()-X|BodyAngularVelocityXaxisFrequencyDomainMeanValue|
+|fBodyGyro-mean()-Y|BodyAngularVelocityYaxisFrequencyDomainMeanValue|
+|fBodyGyro-mean()-Z|BodyAngularVelocityZaxisFrequencyDomainMeanValue|
+|fBodyGyro-std()-X|BodyAngularVelocityXaxisFrequencyDomainStandardDeviation|
+|fBodyGyro-std()-Y|BodyAngularVelocityYaxisFrequencyDomainStandardDeviation|
+|fBodyGyro-std()-Z|BodyAngularVelocityZaxisFrequencyDomainStandardDeviation|
+|fBodyGyro-meanFreq()-X|BodyAngularVelocityXaxisFrequencyDomainMeanFrequency|
+|fBodyGyro-meanFreq()-Y|BodyAngularVelocityYaxisFrequencyDomainMeanFrequency|
+|fBodyGyro-meanFreq()-Z|BodyAngularVelocityZaxisFrequencyDomainMeanFrequency|
+|fBodyAccMag-mean()|BodyLinearAccelerationEuclideanNormFrequencyDomainMeanValue|
+|fBodyAccMag-std()|BodyLinearAccelerationEuclideanNormFrequencyDomainStandardDeviation|
+|fBodyAccMag-meanFreq()|BodyLinearAccelerationEuclideanNormFrequencyDomainMeanFrequency|
+|fBodyBodyAccJerkMag-mean()|BodyLinearAccelerationJerkEuclideanNormFrequencyDomainMeanValue|
+|fBodyBodyAccJerkMag-std()|BodyLinearAccelerationJerkEuclideanNormFrequencyDomainStandardDeviation|
+|fBodyBodyAccJerkMag-meanFreq()|BodyLinearAccelerationJerkEuclideanNormFrequencyDomainMeanFrequency|
+|fBodyBodyGyroMag-mean()|BodyAngularVelocityEuclideanNormFrequencyDomainMeanValue|
+|fBodyBodyGyroMag-std()|BodyAngularVelocityEuclideanNormFrequencyDomainStandardDeviation|
+|fBodyBodyGyroMag-meanFreq()|BodyAngularVelocityEuclideanNormFrequencyDomainMeanFrequency|
+|fBodyBodyGyroJerkMag-mean()|BodyAngularVelocityJerkEuclideanNormFrequencyDomainMeanValue|
+|fBodyBodyGyroJerkMag-std()|BodyAngularVelocityJerkEuclideanNormFrequencyDomainStandardDeviation|
+|fBodyBodyGyroJerkMag-meanFreq()|BodyAngularVelocityJerkEuclideanNormFrequencyDomainMeanFrequency|
