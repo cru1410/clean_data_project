@@ -12,11 +12,17 @@ This tidy data set was output to a file named 'tidyset.txt'.
 
 The next section provides a data dictionary for each variable in 'tidyset.txt'.
 
+The final section provides a mapping on how the variable names of the extracted measurements were renamed.
+
 
 ## DATA DICTIONARY (tidyset.txt)
 
+The data set contains the average of each variable for each activity and each subject per row.
+
 |Variable Name|Unit|Description of the Variable|
 |---|---|---|
+|Activity|no units (text label)|One of the six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) carried out by the subjects|
+|SubjectID|no units (integer coding)|An identifier of the subject who carried out the experiment|
 |BodyLinearAccelerationXaxisTimeDomainMeanValue|standard gravity units 'g'|Body Linear Acceleration in the X direction time domain signals - Mean Value|
 |BodyLinearAccelerationYaxisTimeDomainMeanValue|standard gravity units 'g'|Body Linear Acceleration in the Y direction time domain signals - Mean Value|
 |BodyLinearAccelerationZaxisTimeDomainMeanValue|standard gravity units 'g'|Body Linear Acceleration in the Z direction time domain signals - Mean Value|
