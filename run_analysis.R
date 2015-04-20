@@ -15,11 +15,11 @@
 #    variable for each activity and each subject.
 # 6) Output the tidy data set as a text file.
 
-message("Loading library... ")
+message("Loading library... "); flush.console()
 
 suppressMessages(library(dplyr))
 
-message("Reading data... ")
+message("Reading data... "); flush.console()
 
 df_activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt")
 names(df_activity_labels) <- c("ActivityCode","Activity")
@@ -43,7 +43,7 @@ df_x_test <- read.table("UCI HAR Dataset/test/X_test.txt", colClasses = "numeric
 df_x_all <- bind_rows(df_x_train, df_x_test)
 rm("df_x_train","df_x_test")
 
-message("Done reading data... Now processing data.")
+message("Done reading data... Now processing data."); flush.console()
 
 # 2) Uses descriptive activity names to name the activities in the data set.
 
@@ -161,4 +161,4 @@ df_avg <- df_all %>%
 
 write.table(df_avg, file="tidyset.txt", row.name=FALSE)
 
-message("Done... Output the tidy data set as \"tidyset.txt\"")
+message("Done... Output the tidy data set as \"tidyset.txt\""); flush.console()
